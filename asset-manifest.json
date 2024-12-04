@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/bicho-diario/static/css/main.f855e6bc.css",
-    "main.js": "/bicho-diario/static/js/main.e7e0cc0e.js",
+    "main.css": "/bicho-diario/static/css/main.ca57846c.css",
+    "main.js": "/bicho-diario/static/js/main.822ce234.js",
     "static/js/453.84eb63e1.chunk.js": "/bicho-diario/static/js/453.84eb63e1.chunk.js",
-    "static/media/logo.svg": "/bicho-diario/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/bicho-diario/index.html",
-    "main.f855e6bc.css.map": "/bicho-diario/static/css/main.f855e6bc.css.map",
-    "main.e7e0cc0e.js.map": "/bicho-diario/static/js/main.e7e0cc0e.js.map",
+    "main.ca57846c.css.map": "/bicho-diario/static/css/main.ca57846c.css.map",
+    "main.822ce234.js.map": "/bicho-diario/static/js/main.822ce234.js.map",
     "453.84eb63e1.chunk.js.map": "/bicho-diario/static/js/453.84eb63e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.e7e0cc0e.js"
+    "static/css/main.ca57846c.css",
+    "static/js/main.822ce234.js"
   ]
 }
