@@ -35,3 +35,43 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #388e3c;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+}
+
+.suggestions {
+  position: absolute;
+  font-size: 10px;
+  width: 100%;
+  background: #282c34;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+}
+
+.suggestions li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #4caf50;
+  color: white;
+}
