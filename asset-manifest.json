@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bicho-diario/static/css/main.c702c8b8.css",
-    "main.js": "/bicho-diario/static/js/main.24e3e615.js",
+    "main.css": "/bicho-diario/static/css/main.685b6b2a.css",
+    "main.js": "/bicho-diario/static/js/main.bcc26753.js",
     "index.html": "/bicho-diario/index.html",
-    "main.c702c8b8.css.map": "/bicho-diario/static/css/main.c702c8b8.css.map",
-    "main.24e3e615.js.map": "/bicho-diario/static/js/main.24e3e615.js.map"
+    "main.685b6b2a.css.map": "/bicho-diario/static/css/main.685b6b2a.css.map",
+    "main.bcc26753.js.map": "/bicho-diario/static/js/main.bcc26753.js.map"
   },
   "entrypoints": [
-    "static/css/main.c702c8b8.css",
-    "static/js/main.24e3e615.js"
+    "static/css/main.685b6b2a.css",
+    "static/js/main.bcc26753.js"
   ]
 }
