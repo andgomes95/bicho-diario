@@ -11,3 +11,27 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+/* Center the table */
+.table-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  margin-top: 20px; /* Add some spacing */
+}
+
+/* Optional: Add some styling to the table */
+table {
+  border-collapse: collapse;
+  width: 50%; /* Adjust the width as needed */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
