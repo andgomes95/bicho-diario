@@ -94,7 +94,8 @@ const Home = () => {
             <button type="submit" disabled={message === "YOU WIN"}>
               Enviar
             </button>
-            {message === "YOU WIN" && <button onClick={reset}>Enviar</button>}
+            {message === "YOU WIN" && <button onClick={reset}>Reset</button>}
+            <br />
           </form>
         </header>
         <div className="table-container">
