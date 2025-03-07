@@ -7,34 +7,18 @@ const containerStyle = {
   boxSizing: "border-box",
 };
 
-const borderCommon = {
-  position: "fixed",
-  zIndex: 1000,
-  display: "flex",
-};
-
-const leftBorderStyle = {
-  ...borderCommon,
-  top: 0,
-  bottom: 0,
-  left: 0,
-  flexDirection: "column",
-  alignItems: "center",
-  backgroundColor: "rgba(255,255,255,0.8)",
-};
-
 const rightBorderStyle = {
-  ...borderCommon,
   top: 0,
   bottom: 0,
   right: 0,
-  flexDirection: "column",
   alignItems: "center",
-  backgroundColor: "rgba(255,255,255,0.8)",
+  backgroundColor: "var(--primary-color)",
+  justifyContent: "center",
+  display: "flex",
 };
-
 const contentStyle = {
-  padding: "0 120px", // Espaço lateral para evitar sobreposição com as bordas
+  padding: "0 120px",
+  backgroundColor: "var(--secondary-color)",
 };
 
 const imageStyle = {
@@ -44,11 +28,13 @@ const imageStyle = {
 // Função para embaralhar um array usando o algoritmo Fisher-Yates
 const shuffleArray = (array) => {
   const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  let answer = [];
+  for (let i = 10; i > 0; i--) {
+    const j = Math.floor(Math.random() * (array.length -1));
+    answer.push(newArray[j]);
   }
-  return newArray;
+  console.log(answer);
+  return answer;
 };
 
 const BorderedFrame = ({ children }) => {
@@ -61,20 +47,10 @@ const BorderedFrame = ({ children }) => {
 
   return (
     <div style={containerStyle}>
-      {/* Borda esquerda */}
-      <div style={leftBorderStyle}>
-        {shuffledCollection.map((id) => (
-          <img
-            key={`left-${id}`}
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
-            alt={`Pokémon ${id}`}
-            style={imageStyle}
-          />
-        ))}
+      <div style={contentStyle}>
+        {children}
       </div>
-
-      {/* Borda direita */}
-      <div style={rightBorderStyle}>
+      <footer style={rightBorderStyle}>
         {shuffledCollection.map((id) => (
           <img
             key={`right-${id}`}
@@ -83,12 +59,7 @@ const BorderedFrame = ({ children }) => {
             style={imageStyle}
           />
         ))}
-      </div>
-
-      {/* Conteúdo principal */}
-      <div style={contentStyle}>
-        {children}
-      </div>
+      </footer>
     </div>
   );
 };

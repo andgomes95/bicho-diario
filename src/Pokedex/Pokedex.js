@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import cards from "./cards.json";
 import myCollection from "./mycollection.json";
 import BorderedFrame from "./BorderedFrame";
@@ -53,18 +52,37 @@ const Pokedex = () => {
 
   return (
     <BorderedFrame>
-      <h1>Quais cartas faltam para completar minha pokedex?</h1>
+      <div style={{
+            padding: 'var(--spacing-md)',
+            fontSize: 'var(--text-3xl)',
+            color: 'var(--primary-dark)',
+            textAlign: 'center'
+          }}>
+            Quais cartas faltam para completar minha pokedex?
+          </div>
       <button onClick={saveToFile} style={{ margin: "10px" }}>Save to JSON</button>
       {Object.keys(filteredSets).length > 0 ? (
         <div className="sets-container">
           {Object.entries(filteredSets).map(([set, cardsInSet]) => (
             <div className="set" key={set}>
-              <h2 
+              <div 
                 onClick={() => toggleVisibility(set)} 
-                style={{ cursor: "pointer" }}
+                style={{
+                  padding: 'var(--spacing-xs)',
+                  fontSize: 'var(--text-2xl)',
+                  backgroundColor: 'var(--primary-light)',
+                  color: 'var(--secondary-light)',
+                  borderRadius: 'var(--radius-md)',
+                  boxShadow: 'var(--shadow-md)',
+                  marginTop: 'var(--spacing-xs)',
+                  
+
+                  textAlign: 'center',
+                  cursor: "pointer"
+                }}
               >
                 Set: {set} ({cardsInSet.length} faltando)
-              </h2>
+              </div>
               {visibleSets[set] && (
                 <div
                   className="cards-container"

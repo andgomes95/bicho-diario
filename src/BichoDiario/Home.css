@@ -3,75 +3,73 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: var(--text-xl);
+  color: var(--background);
 }
 
-/* Center the table */
 .table-container {
   display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
-  margin-top: 20px; /* Add some spacing */
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-xl);
 }
 
-/* Optional: Add some styling to the table */
 table {
   border-collapse: collapse;
-  width: 50%; /* Adjust the width as needed */
+  width: 50%;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-sm);
   text-align: left;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: var(--surface);
 }
 
 input {
   width: 100%;
-  padding: 10px;
-  font-size: 15px;
-  border: 2px solid #4caf50;
-  border-radius: 5px;
+  padding: var(--spacing-sm);
+  font-size: var(--text-base);
+  border: 2px solid var(--success);
+  border-radius: var(--radius-sm);
   outline: none;
-  transition: all 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 input:focus {
-  border-color: #388e3c;
-  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+  border-color: var(--success);
+  box-shadow: var(--shadow-sm);
 }
 
 .suggestions {
   position: absolute;
-  font-size: 10px;
+  font-size: var(--text-xs);
   width: 100%;
-  background: #282c34;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background: var(--primary-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
   max-height: 300px;
   overflow-y: auto;
-  margin-top: 5px;
+  margin-top: var(--spacing-xs);
   list-style: none;
   padding: 0;
-  z-index: 1000;
+  z-index: var(--z-popover);
 }
 
 .suggestions li {
-  padding: 5px;
+  padding: var(--spacing-xs);
   cursor: pointer;
 }
 
 .suggestions li:hover {
-  background: #4caf50;
-  color: white;
+  background: var(--success);
+  color: var(--background);
 }
